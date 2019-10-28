@@ -36,3 +36,13 @@ function getGrandTotal()
     //update the grandtotal's box
     grandTotal.value = "$" + (subtotal + subtotal*TAX_RATE + fee);
 }
+
+function popcornconfirm() {
+
+    var confirmation= confirm("Are you sure want this order?");
+    if  (!confirmation) {
+        alert("You are canceling your order");
+        return false;
+    }
+
+}
