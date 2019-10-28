@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="file:///Users/labuser/Desktop/Popcorn/style-sheet.css">
+
+</head>
 <body>
 
-<h1>Club Popcorn Sales</h1>
-
 <fieldset>
-<form onSubmit= "" action="mailto:kenneth_vargas@my.uri.edu" method="post" enctype="multipart/form-data" name="popcorn"> 
+<h1>Club Popcorn Sales</h1>
+<form onSubmit= "return popcornconfirm()" action="mailto:kenneth_vargas@my.uri.edu" method="post" enctype="multipart/form-data" name="popcorn"> 
 
+<div id = "info">
 Buyer's Name:<input type= "text" name="Buyer's Name" placeholder="Name Required" required="input"> <br/>
 Street Address:<input type="text" name="Street Address"> <br/>
 City, State, Zip:<input type="text" name = "City,State,Zip"> <br/>
+</div>
 
-
-<table width = 50%>
+<table>
     <tr>
         <td><h3>Product Name</h3></td>
         <td><h3>Price</h3></td>
@@ -30,12 +35,12 @@ City, State, Zip:<input type="text" name = "City,State,Zip"> <br/>
     </tr>
     <tr>
         <td>Caramel Nut Popcorn (2 lb. canister)</td>
-        <td>$3.50</td>
+        <td>$4.50</td>
         <td><input type="number" name="caramelNut" min="0" max="9"></td>
     </tr>
     <tr>
         <td>Toffey Nut Popcorn (2 lb. canister)</td>
-        <td>$3.50</td>
+        <td>$5.00</td>
         <td><input type="number" name="toffey" min="0" max="9"></td>
     </tr>
     <tr>
