@@ -1,0 +1,8 @@
+h1, h2 {
+    text-align: center;
+}
+
+body {
+    width: 100%;
+    max-width: 600px;
+}

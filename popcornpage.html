@@ -2,7 +2,7 @@
 <html>
 <head>
 
-<link rel="stylesheet" type="text/css" href="file:///Users/labuser/Desktop/Popcorn/style-sheet.css">
+<link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 <body>
@@ -53,19 +53,19 @@ City, State, Zip:<input type="text" name = "City,State,Zip"> <br/>
 <h2>Payment Method</h2>
 <h3>Grand Total:<input id="grand-total" type="text" name="Grand Total" readonly></h3>
 Visa:
-<input type="radio" name="paymentMethod" value="visa" onclick="getGrandTotal()"> 
+<input type="radio" id="visa" name="paymentMethod" value="visa" onclick="getGrandTotal()"> 
 
 MasterCard:
-<input type="radio" name="paymentMethod" value="mastercard" onclick="getGrandTotal()"> 
+<input type="radio" id="mastercard" name="paymentMethod" value="mastercard" onclick="getGrandTotal()"> 
 
 Discover:
-<input type="radio" name="paymentMethod" value="discover" onclick="getGrandTotal()"> 
+<input type="radio" id="discover" name="paymentMethod" value="discover" onclick="getGrandTotal()"> 
 
 American Express:
-<input type="radio" name="paymentMethod" value="amex" onclick="getGrandTotal()"> 
+<input type="radio" id="amex" name="paymentMethod" value="amex" onclick="getGrandTotal()"> 
 
 Check:
-<input type="radio" name="paymentMethod" value="check" onclick="getGrandTotal()"> 
+<input type="radio" id="check" name="paymentMethod" value="check" onclick="getGrandTotal()" checked> 
 <br>
 <br>
 <br>

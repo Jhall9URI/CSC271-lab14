@@ -26,12 +26,11 @@ function updateSubtotal()
 function getGrandTotal()
 {
     var grandTotal = document.getElementById("grand-total");
-
-    //get the checked radio button from the group
-    var payment = document.querySelector('input[name="paymentMethod"]:checked');
+    
+    payByCheck = document.getElementById("check");
 
     //if "check" is selected, then add a fee, if something else (or nothing) is selected, no fee.
-    var fee = (payment && payment.value === "check" ? 2.50 : 0.00);
+    var fee = (payByCheck.checked ? 0.00 : 2.50);
 
     //update the grandtotal's box
     grandTotal.value = "$" + (subtotal + subtotal*TAX_RATE + fee);
@@ -39,10 +38,18 @@ function getGrandTotal()
 
 function popcornconfirm() {
 
-    var confirmation= confirm("Are you sure want this order?");
-    if  (!confirmation) {
-        alert("You are canceling your order");
-        return false;
+    payByCheck = document.getElementById("check");
+    if (!payByCheck.checked)
+    {
+        var confirmation= confirm("There is a $2.50 fee for credits cards. Are you okay with this subcharge?");
+
+        if (!confirmation)
+        {
+            payByCheck.checked = true;
+            getGrandTotal();
+            return false
+        }
     }
 
+    return true;
 }
